@@ -810,6 +810,14 @@ cpdefine("inline:com-chilipeppr-widget-spconsole", ["chilipeppr_ready", "jqueryc
 
                 }
 
+                var mensaje = msg.val();
+
+                if (mensaje.match(/\bUTO\b/i)){
+                    alert("ES UTO");
+
+                }
+
+                
                 var newline = "\n";
 
                 // publish the cmd to the serial port
