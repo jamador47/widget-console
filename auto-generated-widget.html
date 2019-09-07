@@ -819,6 +819,7 @@ cpdefine("inline:com-chilipeppr-widget-spconsole", ["chilipeppr_ready", "jqueryc
                     var utoy = mensaje.match(/Y(.*?) /i)[1];
                     var utoa = mensaje.match(/A(.*?) /i)[1];
                     var utoz = mensaje.match(/Z(.*?)*/i);
+                    utoz= utoz.substring(1);
 
                     alert(utoz);
 
