@@ -814,13 +814,13 @@ cpdefine("inline:com-chilipeppr-widget-spconsole", ["chilipeppr_ready", "jqueryc
 
                 if (mensaje.match(/\bUTO\b/i)){
                     
-                    var numeroorigen = mensaje.match(/UTO (.*?) X/i)[1];
-                    var utox = mensaje.match(/X(.*?) /i)[1];
-                    var utoy = mensaje.match(/Y(.*?) /i)[1];
-                    var utoa = mensaje.match(/A(.*?) /i)[1];
-                    var utoz = mensaje.match(/Z(.*?) /i)[1];
+                    var numeroorigen = mensaje.match(/UTO (.*?) /i)[1];
+                    var utox = mensaje.match(/X(.*?)?/i)[1];
+                    var utoy = mensaje.match(/Y(.*?)?/i)[1];
+                    var utoa = mensaje.match(/A(.*?)?/i)[1];
+                    var utoz = mensaje.match(/Z(.*?)?/i)[1];
 
-                    alert(utox);
+                    alert("origen"+numeroorigen+"utox "+utox+" y "+utoy+" a "+utoa+" z "+utoz);
                 }
 
                 
