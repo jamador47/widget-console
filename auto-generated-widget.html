@@ -841,7 +841,7 @@ cpdefine("inline:com-chilipeppr-widget-spconsole", ["chilipeppr_ready", "jqueryc
                                         anHttpRequest.send(null);
                                     }
                                 }
-                                var theurl = 'http://localhost:8000/api/uto/'+numeroorigen+"/"+utox+"/"+utoy+"/"+utoa+"/"+utoz;
+                                var theurl = 'http://192.168.0.98/api/uto/'+numeroorigen+"/"+utox+"/"+utoy+"/"+utoa+"/"+utoz;
                                 var client = new HttpClient();
                                 client.get(theurl, function(response) {
 
@@ -859,7 +859,7 @@ cpdefine("inline:com-chilipeppr-widget-spconsole", ["chilipeppr_ready", "jqueryc
                                                     anHttpRequest.send(null);
                                                 }
                                             }
-                                            var theurl = 'http://localhost:8000/api/obtenerorigenesusar';
+                                            var theurl = 'http://192.168.0.98/api/obtenerorigenesusar';
                                             var client = new HttpClient();
                                             client.get(theurl, function(response) {
 
@@ -972,7 +972,7 @@ cpdefine("inline:com-chilipeppr-widget-spconsole", ["chilipeppr_ready", "jqueryc
                                                 var cmd = "G10 L2 P1 X"+xcambiar+" Y"+ycambiar+" A"+acambiar+" Z"+zcambiar;
                                                 chilipeppr.publish("/com-chilipeppr-widget-serialport/ws/send", "sendnobuf " + serialPort + " " + cmd); 
 
-                                                alert(cmd);
+                                                //alert(cmd);
                                                 setTimeout(function(){
                                                     var cmd = "G54";
                                                     chilipeppr.publish("/com-chilipeppr-widget-serialport/ws/send", "sendnobuf " + serialPort + " " + cmd); 
@@ -1006,7 +1006,7 @@ cpdefine("inline:com-chilipeppr-widget-spconsole", ["chilipeppr_ready", "jqueryc
                                                     anHttpRequest.send(null);
                                                 }
                                             }
-                                            var theurl = 'http://localhost:8000/api/obtenerorigenesusar';
+                                            var theurl = 'http://192.168.0.98/api/obtenerorigenesusar';
                                             var client = new HttpClient();
                                             client.get(theurl, function(response) {
 
@@ -1119,7 +1119,7 @@ cpdefine("inline:com-chilipeppr-widget-spconsole", ["chilipeppr_ready", "jqueryc
                                                 var cmd = "G10 L2 P1 X"+xcambiar+" Y"+ycambiar+" A"+acambiar+" Z"+zcambiar;
                                                 chilipeppr.publish("/com-chilipeppr-widget-serialport/ws/send", "sendnobuf " + serialPort + " " + cmd); 
 
-                                                alert(cmd);
+                                               // alert(cmd);
                                                 setTimeout(function(){
                                                     var cmd = "G54";
                                                     chilipeppr.publish("/com-chilipeppr-widget-serialport/ws/send", "sendnobuf " + serialPort + " " + cmd); 
