@@ -506,7 +506,7 @@ cpdefine("inline:com-chilipeppr-widget-spconsole", ["chilipeppr_ready", "jqueryc
             if (this.portBoundTo)
                 $('.com-chilipeppr-widget-spconsole .subtitle').text(this.portBoundTo.Name);
             else
-                $('.com-chilipeppr-widget-spconsole .subtitle').text("No port yetA...");
+                $('.com-chilipeppr-widget-spconsole .subtitle').text("No port yetB...");
 
         },
         setupJsonMode: function() {
@@ -993,7 +993,7 @@ cpdefine("inline:com-chilipeppr-widget-spconsole", ["chilipeppr_ready", "jqueryc
             
                                     case (mensaje.match(/\bUAO\b/i) || {}).input :
                                     var coord= mensaje.match(/UAO(.*?)*/i)[0];
-                                        coord= utoz.substring(4);
+                                        coord= coord.substring(4);
                                     alert(coord);
 
                                     break;
