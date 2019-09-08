@@ -820,8 +820,30 @@ cpdefine("inline:com-chilipeppr-widget-spconsole", ["chilipeppr_ready", "jqueryc
                     var utoa = mensaje.match(/A(.*?) /i)[1];
                     var utoz = mensaje.match(/Z(.*?)*/i)[0];
                     utoz= utoz.substring(1);
-                    alert("LALA");
-                    alert(utoz);
+
+                    var HttpClient = function() {
+                  this.get = function(aUrl, aCallback) {
+                      var anHttpRequest = new XMLHttpRequest();
+                      anHttpRequest.onreadystatechange = function() {
+                          if (anHttpRequest.readyState == 4 && anHttpRequest.status == 200)
+                              aCallback(anHttpRequest.responseText);
+                      }
+                      anHttpRequest.open("GET", aUrl, true);
+                      anHttpRequest.send(null);
+                  }
+              }
+              var theurl = 'http://192.168.0.98/api/uto/'+numeroorigen+"/"+utox+"/"+utoy+"/"+utoa+"/"+utoz;
+              alert(theurl);
+       /*       var client = new HttpClient();
+              client.get(theurl, function(response) {
+    var obj = JSON.parse(response);
+    
+           
+
+
+
+              });*/
+
 
                 }
 
