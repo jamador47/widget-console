@@ -506,7 +506,7 @@ cpdefine("inline:com-chilipeppr-widget-spconsole", ["chilipeppr_ready", "jqueryc
             if (this.portBoundTo)
                 $('.com-chilipeppr-widget-spconsole .subtitle').text(this.portBoundTo.Name);
             else
-                $('.com-chilipeppr-widget-spconsole .subtitle').text("No port yetC...");
+                $('.com-chilipeppr-widget-spconsole .subtitle').text("No port yetA...");
 
         },
         setupJsonMode: function() {
@@ -1119,7 +1119,7 @@ cpdefine("inline:com-chilipeppr-widget-spconsole", ["chilipeppr_ready", "jqueryc
                                                 var cmd = "G10 L2 P1 X"+xcambiar+" Y"+ycambiar+" A"+acambiar+" Z"+zcambiar;
                                                 chilipeppr.publish("/com-chilipeppr-widget-serialport/ws/send", "sendnobuf " + serialPort + " " + cmd); 
 
-                                                alert("cmd");
+                                                alert(cmd);
                                                 setTimeout(function(){
                                                     var cmd = "G54";
                                                     chilipeppr.publish("/com-chilipeppr-widget-serialport/ws/send", "sendnobuf " + serialPort + " " + cmd); 
