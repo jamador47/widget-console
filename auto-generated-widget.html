@@ -992,6 +992,24 @@ cpdefine("inline:com-chilipeppr-widget-spconsole", ["chilipeppr_ready", "jqueryc
                                     //INICIO UAO
             
                                     case (mensaje.match(/\bUAO\b/i) || {}).input :
+
+                                    var HttpClient = function() {
+                                                this.get = function(aUrl, aCallback) {
+                                                    var anHttpRequest = new XMLHttpRequest();
+                                                    anHttpRequest.onreadystatechange = function() {
+                                                        if (anHttpRequest.readyState == 4 && anHttpRequest.status == 200)
+                                                            aCallback(anHttpRequest.responseText);
+                                                    }
+                                                    anHttpRequest.open("GET", aUrl, true);
+                                                    anHttpRequest.send(null);
+                                                }
+                                            }
+                                            var theurl = 'http://192.168.0.98/api/resetuto';
+                                            var client = new HttpClient();
+                                            client.get(theurl, function(response) {
+                                            });
+                                    
+
                                     var coord= mensaje.match(/UAO(.*?)*/i)[0];
                                         coord= coord.substring(4);
 
